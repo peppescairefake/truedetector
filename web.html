@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Truth Detector</h1>
+        <button id="startButton">Start Recording</button>
+        <button id="stopButton" style="display:none;">Stop Recording</button>
+        <p id="result"></p>
+        <img id="resultImage" style="display:none;" src="" alt="Result Image">
+        <svg id="microphoneIcon" viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: #333; display: none;">
+            <path d="M12 15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2s-2 .9-2 2v8c0 1.1.9 2 2 2z"></path>
+            <path d="M15 12v2a3 3 0 0 1-6 0v-2H7v-3h10v3h-2z"></path>
+        </svg>
+        
+        <!-- Hidden inputs to choose the next answer -->
+        <input type="radio" id="nextTruth" name="nextAnswer" value="truth" style="display:none;">
+        <input type="radio" id="nextLie" name="nextAnswer" value="lie" style="display:none;">
+    </div>
+    <audio id="correctSound" src="correct.mp3"></audio>
+    <audio id="incorrectSound" src="incorrect.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
